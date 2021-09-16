@@ -1,0 +1,30 @@
+<div class="container-fluid row debug p-0">
+  <div class="col-3 debug p-0">LISTING HERE</div>
+
+  <div class="col-9 card big-box debug p-0">
+    <div class="card-body message-box debug p-0">
+      <div *ngFor="let message of messages.items" class="p-0">
+        <div>
+          {{ toTime(message.postDate) }}
+          {{ isYou(message.userId) ? '☆' : '' }}
+          {{ message.userName }}:
+          {{ message.content }}
+        </div>
+      </div>
+    </div>
+    <div class="input-container debug row m-0 p-0">
+      <div class="text-container col-11 p-0">
+        <span
+          id="textPlace"
+          role="textbox"
+          autocomplete="off"
+          spellcheck="false"
+          class="text p-0"
+          contenteditable
+        >
+        </span>
+      </div>
+      <button class="btn btn-primary col-1 p-0" (click)="sendData()">SEND</button>
+    </div>
+  </div>
+</div>
