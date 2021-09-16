@@ -16,4 +16,4 @@ To Run backend, run the `HttpApi.Host` project in `aspnet-core`
 
 To Run UI go to the `angular` folder and run
 
-> yar run start
+> yarn run start
